@@ -1,0 +1,19 @@
+.logo {
+  text-align: left;
+  padding: 5px 10px;
+  color: var(--secondary);
+  background-color: var(--primary);
+}
+
+.user {
+  border: 1px double var(--primary);
+  border-radius: 50%;
+  padding: 10px;
+  background-color: var(--primary);
+  color: var(--secondary);
+  margin-top: 20px;
+}
+
+.user__name {
+  color: var(--primary);
+}

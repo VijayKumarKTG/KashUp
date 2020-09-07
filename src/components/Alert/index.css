@@ -1,0 +1,11 @@
+.alert {
+  width: 80%;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  background-color: var(--secondary);
+  padding: 20px;
+  border: 2px solid var(--primary);
+  border-radius: 20px;
+  color: var(--primary);
+}

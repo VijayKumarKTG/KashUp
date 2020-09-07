@@ -1,0 +1,13 @@
+select {
+  width: 40%;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  color: var(--primary);
+  margin: 10px;
+}
+
+select:hover {
+  border-color: var(--tartiary);
+}

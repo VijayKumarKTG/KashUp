@@ -1,0 +1,55 @@
+.flex__container {
+  display: flex;
+}
+
+.flex__delete {
+  padding: 10px;
+  color: var(--secondary);
+  background: var(--expense);
+  margin-bottom: 3px;
+}
+
+.flex__delete:hover {
+  background-color: red;
+}
+
+.flex__text {
+  width: 120px;
+  padding: 10px 3px;
+  color: var(--income);
+  font-size: 1rem;
+  font-weight: bolder;
+  margin-bottom: 3px;
+}
+
+.flex__text:hover {
+  background-color: rgb(194, 255, 179);
+}
+
+.flex__text--expense {
+  color: var(--expense);
+}
+
+.flex__text--expense:hover {
+  background-color: rgb(255, 194, 179);
+}
+
+.flex__percentage {
+  width: 50px;
+  padding: 10px 3px;
+  margin-bottom: 3px;
+  color: var(--secondary);
+  background-color: var(--income);
+}
+
+.flex__percentage:hover {
+  background-color: rgb(129, 255, 97);
+}
+
+.flex__percentage--expense {
+  background-color: var(--expense);
+}
+
+.flex__percentage--expense:hover {
+  background-color: rgb(255, 97, 129);
+}

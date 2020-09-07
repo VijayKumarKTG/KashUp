@@ -1,0 +1,20 @@
+.quote__text {
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+.quote__hr {
+  width: 70%;
+  height: 3px;
+  background-color: var(--primary);
+  margin: 10px auto;
+}
+
+.author {
+  color: var(--primary);
+}
+
+.author__name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}

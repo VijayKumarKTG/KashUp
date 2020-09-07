@@ -1,0 +1,19 @@
+@charset 'utf-8';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #07689f;
+  --secondary: #ffffff;
+  --tartiary: #000000;
+  --income: #28df99;
+  --expense: #ff165d;
+}
+
+body {
+  text-align: center;
+  background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+}

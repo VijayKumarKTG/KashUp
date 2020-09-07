@@ -1,0 +1,15 @@
+input {
+  width: 80%;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  color: var(--primary);
+  margin: 10px auto;
+  padding: 5px 10px;
+  display: block;
+}
+
+input:hover {
+  border-color: var(--tartiary);
+}
