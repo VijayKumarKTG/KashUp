@@ -13,7 +13,23 @@
   --expense: #ff165d;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   text-align: center;
   background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 23px;
+  }
 }

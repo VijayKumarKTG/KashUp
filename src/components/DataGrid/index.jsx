@@ -47,6 +47,7 @@ export default class DataGrid extends Component {
         if (key.search(regex) > -1) {
           obj.push(
             <DataFlex
+              type={this.props.type}
               key={val.id}
               category={key}
               amount={val.amount[val.amount.length - 1]}
@@ -70,8 +71,16 @@ export default class DataGrid extends Component {
     }
     return (
       <div>
-        <div style={{ display: 'flex' }}>
-          <div>Filter by category name:</div>
+        <h2
+          className={
+            this.props.type.toLowerCase() === 'expense'
+              ? 'heading heading--expense'
+              : 'heading'
+          }>
+          {this.props.type}
+        </h2>
+        <div>
+          <div className='filter__text'>Filter by category name:</div>
           <Input
             type='text'
             placeholder='Category'
@@ -79,15 +88,29 @@ export default class DataGrid extends Component {
           />
         </div>
         <div className='grid__container'>
-          <div className='grid__heading'>{this.props.type}</div>
           {obj.map((e) => e)}
-          <div style={{ display: 'flex' }}>
-            <div>Total</div>
+          <div
+            className={
+              this.props.type.toLowerCase() === 'expense'
+                ? 'total total--expense'
+                : 'total'
+            }>
+            <div className='total__text'>Total</div>
             <CurrencyContext.Consumer>
-              {(currency) => <div>{currency + ' ' + this.props.total}</div>}
+              {(currency) => (
+                <div className='total__amount'>
+                  {currency + ' ' + this.props.total}
+                </div>
+              )}
             </CurrencyContext.Consumer>
           </div>
-          <div onClick={this.onClickHandler}>
+          <div
+            onClick={this.onClickHandler}
+            className={
+              this.props.type.toLowerCase() === 'expense'
+                ? 'add__category add__category--expense'
+                : 'add__category'
+            }>
             <PlusCircle />
           </div>
         </div>

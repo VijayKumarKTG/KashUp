@@ -13,7 +13,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      expLimit: 0,
+      expLimit: 500000,
       currency: '$',
       datapoint: {
         income: {
@@ -135,27 +135,31 @@ class App extends Component {
           onExpLimitChange={this.onExpLimitChange}
         />
         <Form income={income} expense={expense} onSubmit={this.onSubmitForm} />
-        <DataGrid
-          type='Income'
-          data={datapoint.income}
-          total={getTotal(datapoint.income)}
-          onSubmit={this.onSubmitAlert}
-          onDelete={this.onDeleteCategory}
-        />
-        <DataGrid
-          type='Expense'
-          data={datapoint.expense}
-          total={getTotal(datapoint.expense)}
-          onSubmit={this.onSubmitAlert}
-          onDelete={this.onDeleteCategory}
-        />
+        <div className='app__grid'>
+          <DataGrid
+            type='Income'
+            data={datapoint.income}
+            total={getTotal(datapoint.income)}
+            onSubmit={this.onSubmitAlert}
+            onDelete={this.onDeleteCategory}
+          />
+          <DataGrid
+            type='Expense'
+            data={datapoint.expense}
+            total={getTotal(datapoint.expense)}
+            onSubmit={this.onSubmitAlert}
+            onDelete={this.onDeleteCategory}
+          />
+        </div>
         <Limiter
           incomeTotal={getTotal(datapoint.income)}
           expenseTotal={getTotal(datapoint.expense)}
           limit={this.state.expLimit}
         />
-        <Visualizer type='Income' data={datapoint.income} />
-        <Visualizer type='Expense' data={datapoint.expense} />
+        <div className='app__grid'>
+          <Visualizer type='Income' data={datapoint.income} />
+          <Visualizer type='Expense' data={datapoint.expense} />
+        </div>
       </CurrencyContext.Provider>
     );
   }

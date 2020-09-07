@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Alert from '../Alert';
 import Button from '../Button';
+import { CurrencyContext } from '../contexts';
+import './index.css';
 
 export default class Limiter extends Component {
   constructor(props) {
@@ -25,12 +27,26 @@ export default class Limiter extends Component {
   render() {
     const { incomeTotal, expenseTotal, limit } = this.props;
     return (
-      <div>
-        <div>Total Income: {incomeTotal}</div>
-        <div>Total Expense: {expenseTotal}</div>
-        <div>Expenditure Limit: {limit}</div>
+      <div className='limit__container'>
+        <CurrencyContext.Consumer>
+          {(currency) => (
+            <div className='limit__flex'>
+              <div className='limit__income'>
+                Total Income: {`${currency} ${incomeTotal}`}
+              </div>
+              <div className='limit__expense'>
+                Total Expense: {`${currency} ${expenseTotal}`}
+              </div>
+              <div className='limit__amount'>
+                Expenditure Limit: {`${currency} ${limit}`}
+              </div>
+            </div>
+          )}
+        </CurrencyContext.Consumer>
         {parseInt(expenseTotal) >= parseInt(limit) && (
-          <p>You have arrived to the expenditure limit you set.</p>
+          <p className='limit__text'>
+            You have arrived to the expenditure limit you set.
+          </p>
         )}
         {this.state.active && parseInt(expenseTotal) >= parseInt(limit) && (
           <Alert title='Expenditure Limit Exceed'>

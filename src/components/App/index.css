@@ -1,1 +1,11 @@
 @import '../Library/index.css';
+
+@media screen and (min-width: 1280px) {
+  .app__grid {
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-template-columns: 50% 50%;
+    justify-content: space-evenly;
+  }
+}

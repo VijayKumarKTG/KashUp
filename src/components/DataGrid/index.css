@@ -1,0 +1,62 @@
+.heading {
+  color: var(--secondary);
+  background-color: var(--income);
+  padding: 3px;
+  margin-top: 10px;
+}
+
+.heading--expense {
+  background-color: var(--expense);
+}
+
+.grid__container {
+  display: grid;
+  width: 90%;
+  margin: auto;
+  grid-template-columns: 100%;
+}
+
+.filter__text {
+  font-size: 1rem;
+  font-weight: bolder;
+  color: var(--primary);
+}
+
+.total {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  color: var(--secondary);
+  background-color: var(--income);
+  margin: auto;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.total--expense {
+  background-color: var(--expense);
+}
+
+.add__category {
+  width: 100%;
+  padding: 5px 10px;
+  color: var(--income);
+  background-color: rgba(129, 255, 97, 0.315);
+}
+
+.add__category:hover {
+  color: var(--secondary);
+  background-color: var(--income);
+}
+
+.add__category--expense {
+  color: var(--expense);
+  background-color: rgba(255, 97, 129, 0.315);
+}
+
+.add__category--expense:hover {
+  color: var(--secondary);
+  background-color: var(--expense);
+}

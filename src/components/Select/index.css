@@ -6,6 +6,7 @@ select {
   font-weight: bolder;
   color: var(--primary);
   margin: 10px;
+  padding: 5px 10px;
 }
 
 select:hover {

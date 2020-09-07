@@ -1,0 +1,35 @@
+.limit__container {
+  width: 90%;
+  margin: 30px auto;
+}
+
+.limit__income,
+.limit__expense,
+.limit__amount {
+  color: var(--secondary);
+  justify-self: center;
+  margin-bottom: 3px;
+  padding: 5px 0px;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.limit__income {
+  background-color: var(--income);
+}
+
+.limit__expense {
+  background-color: var(--expense);
+}
+
+.limit__amount {
+  background-color: var(--primary);
+  grid-column-start: 0;
+  grid-column-end: 3;
+}
+
+.limit__text {
+  color: red;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}

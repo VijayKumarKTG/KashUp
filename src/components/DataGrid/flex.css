@@ -1,5 +1,6 @@
 .flex__container {
   display: flex;
+  justify-content: space-between;
 }
 
 .flex__delete {
@@ -52,4 +53,14 @@
 
 .flex__percentage--expense:hover {
   background-color: rgb(255, 97, 129);
+}
+
+@media screen and (min-width: 768px) {
+  .flex__text {
+    width: 300px;
+  }
+
+  .flex__percentage {
+    width: 70px;
+  }
 }
