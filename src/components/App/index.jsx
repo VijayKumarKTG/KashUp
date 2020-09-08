@@ -56,6 +56,7 @@ class App extends Component {
         data[data.length - 1] === 0
           ? (data[data.length - 1] = amount)
           : data.push(amount);
+        console.log(data);
         let temp = type;
         type = '';
         category = '';
