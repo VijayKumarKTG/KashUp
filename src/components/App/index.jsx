@@ -52,10 +52,12 @@ class App extends Component {
   onSubmitForm(type, category, amount) {
     this.setState((state) => {
       if (type !== '' && category !== '' && amount !== 0) {
-        let data = state.datapoint[type][category].amount;
-        data[data.length - 1] === 0
-          ? (data[data.length - 1] = amount)
-          : data.push(amount);
+        let data = state.datapoint[type];
+        let amountTemp = state.datapoint[type][category].amount;
+        amountTemp[amountTemp.length - 1] === 0
+          ? (amountTemp[amountTemp.length - 1] = amount)
+          : amountTemp.push(amount);
+        data[category].amount = amountTemp;
         console.log(data);
         let temp = type;
         type = '';
