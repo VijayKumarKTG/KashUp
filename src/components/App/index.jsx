@@ -58,7 +58,6 @@ class App extends Component {
           ? (amountTemp[amountTemp.length - 1] = amount)
           : amountTemp.push(amount);
         data[category].amount = amountTemp;
-        console.log(data);
         let temp = type;
         type = '';
         category = '';
@@ -75,7 +74,6 @@ class App extends Component {
                   expense: { ...data },
                 },
         };
-        console.log(obj);
         return obj;
       } else return state;
     });

@@ -123,9 +123,10 @@ export default class DataGrid extends Component {
             />
             <Button
               text='Submit'
-              onClickHandler={() =>
-                this.props.onSubmit(this.props.type, this.state.category)
-              }
+              onClickHandler={() => {
+                this.onCancel();
+                this.props.onSubmit(this.props.type, this.state.category);
+              }}
             />
             <Button text='Cancel' onClickHandler={this.onCancel} />
           </Alert>
