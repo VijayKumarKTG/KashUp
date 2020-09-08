@@ -1,6 +1,6 @@
 .alert {
   width: 80%;
-  position: absolute;
+  position: fixed;
   top: 25%;
   left: 10%;
   background-color: var(--secondary);
