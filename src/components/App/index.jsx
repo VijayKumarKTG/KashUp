@@ -73,6 +73,7 @@ class App extends Component {
                   expense: { ...data },
                 },
         };
+        console.log(obj);
         return obj;
       } else return state;
     });
